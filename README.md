@@ -14,6 +14,10 @@
 
 # Описание работы кода для камеры:
 
+# Демонстрация работы определения обьектов на полигоне
+
+<img width="713" height="483" alt="rounded-in-photoretrica" src="https://github.com/user-attachments/assets/109e98a2-48ba-498d-8527-dac8aa6b07c6" />
+
 # Выполнение задания хакатона:
 https://github.com/user-attachments/assets/6d3340c4-5886-4563-8a5b-08ca4a166c75
 
