@@ -59,7 +59,7 @@ def main(args=None):
     try:
         rclpy.spin(camera_node)
     except KeyboardInterrupt:
-        camera_node.get_logger().info('Остановка узла камеры...')
+        camera_node.get_logger().info('Остановка узла камеры....')
     finally:
         # Проверяем, существует ли объект cap, прежде чем его закрывать
         if hasattr(camera_node, 'cap') and camera_node.cap.isOpened():
