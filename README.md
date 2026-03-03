@@ -1,6 +1,6 @@
 # Выполнение хакатона «Автономные дроны и бортовой ИИ» | MISIS Robotics Week
 В данном репозитории представлены все файлы решения команды misis_team для хакатон-интенсива «Автономные дроны и бортовой ИИ» от [компании «Сверх»](https://sverh.tech/home) в рамках мероприятия MISIS Robotics Week!
-
+ 
 <div align="center">
     <img src="https://github.com/user-attachments/assets/a76a4846-d511-4edf-940b-b1d0bb9ee5bc" alt="rounded-in-photoretrica">
 </div>
