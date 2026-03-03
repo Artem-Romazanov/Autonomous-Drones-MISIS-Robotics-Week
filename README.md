@@ -1,5 +1,5 @@
 # Выполнение хакатона «Автономные дроны и бортовой ИИ» | MISIS Robotics Week
-В данном репозитории представлены все файлы решения команды misis_team для хакатон-интенсива «Автономные дроны и бортовой ИИ» от компании «Сверх» в рамках мероприятия MISIS Robotics Week!
+В данном репозитории представлены все файлы решения команды misis_team для хакатон-интенсива «Автономные дроны и бортовой ИИ» от [компании «Сверх»](https://sverh.tech/home) в рамках мероприятия MISIS Robotics Week!
 
 # Описание задания хакатона:
 Хакатон-интенсив представлял собой соревнование, целью которого была разработка программного модуля автономной навигации для образовательного «Обрик» в условиях, приближенных к реальной задаче автоматизации складских помещений.
@@ -15,7 +15,7 @@
 # Описание работы кода для камеры:
 Все файлы для работы камеры лежат в папке [_ros2_camera_code_](https://github.com/Artem-Romazanov/Autonomous-Drones-MISIS-Robotics-Week/tree/main/ros2_camera_code).
 
-1. [_camera_node.py_](https://github.com/Artem-Romazanov/Autonomous-Drones-MISIS-Robotics-Week/blob/main/ros2_camera_code/camera_node.py) — Узел захвата видеопотока. Этот модуль транслирует видео с камеры в среду ROS 2, используя GStreamer или V4L2 для работы на Raspberry Pi 5. Кадры в разрешении 640x480 преобразуются через CvBridge в сообщения _sensor_msgs/Image_ и публикуются в топик _/camera/image_raw_.
+1. [_camera_node.py_](https://github.com/Artem-Romazanov/Autonomous-Drones-MISIS-Robotics-Week/blob/main/ros2_camera_code/camera_node.py) — Узел захвата видеопотока. Этот модуль транслирует видео с камеры в среду ROS 2, используя GStreamer или V4L2 для работы на Raspberry Pi 4. Кадры в разрешении 640x480 преобразуются через CvBridge в сообщения _sensor_msgs/Image_ и публикуются в топик _/camera/image_raw_.
 2. [_ai_node.py_](https://github.com/Artem-Romazanov/Autonomous-Drones-MISIS-Robotics-Week/blob/main/ros2_camera_code/ai_node.py) — Узел нейросетевой детекции объектов. Узел использует модель YOLOv8 для поиска объектов, анализируя кадр в четырех ориентациях (0°–270°) для компенсации крена дрона. После фильтрации дубликатов алгоритмом NMS данные о целях передаются в JSON-формате через топик _/drone/detection_data_, а снимки сохраняются в папку _detections_.
 3. [_aruco_ai_code.py_](https://github.com/Artem-Romazanov/Autonomous-Drones-MISIS-Robotics-Week/blob/main/ros2_camera_code/aruco_ai_code.py) — Узел навигации по маркерам. Компонент вычисляет 3D-дистанцию и вектор направления до ArUco-маркеров размером 5 см методом SolvePnP. Координаты смещения и расстояние публикуются в топик _aruco/vector_data_, а для отладки формируется изображение с осями координат в топике _aruco/debug_image_.
 
